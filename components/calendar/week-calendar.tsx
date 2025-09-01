@@ -515,7 +515,7 @@ export function WeekCalendar({
 
       <div className="flex-1 overflow-auto">
         <div className="min-w-[800px]">
-          <div className={cn("grid border-b border-border bg-muted/30", `grid-cols-${displayDays.length + 1}`)}>
+          <div className="grid grid-cols-8 border-b border-border bg-muted/30">
             <div className="p-2 text-sm font-medium text-muted-foreground"></div>
             {displayDays.map((day, index) => {
               const isToday = day.toDateString() === new Date().toDateString()
@@ -557,7 +557,7 @@ export function WeekCalendar({
                 <div
                   key={slot.index}
                   className={cn(
-                    `grid grid-cols-${displayDays.length + 1}`,
+                    "grid grid-cols-8",
                     slot.minute === 0 && slot.hour > 0 ? "border-t border-border" : "border-t border-border/30",
                     "border-b border-border/30 last:border-b-border",
                   )}
